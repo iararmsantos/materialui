@@ -3,7 +3,7 @@ import { DataGrid } from '@mui/x-data-grid';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import { Link } from 'react-router-dom';
-import { Typography } from '@mui/material';
+import { Typography, Button } from '@mui/material';
 import CheckRoundedIcon from '@mui/icons-material/CheckRounded';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import DataGridToolbar from './DataGridToolbar';
@@ -69,11 +69,22 @@ const Data = () => {
         <Card sx={{ padding: 5 }}>
             <CardHeader title="Todo List 🛹 ✔️"></CardHeader>
             <DataGrid
-                slots={{ toolbar: DataGridToolbar }} 
+                // hideFooter
+                             
+                slots={{ toolbar: DataGridToolbar, baseButton: Button }} 
                 loading={loading} 
                 sx={{ height: 500 }} 
                 columns={columns} 
-                rows={todos} />
+                rows={todos}
+                slotProps={{baseButton:{
+                    variant:"outlined"
+                },
+                }}
+                initialState={{                    
+                    pagination: { paginationModel: { pageSize: 5 } },
+                  }}
+                pageSizeOptions={[5, 10, 25]}                 
+            />
         </Card>
     )
 }
