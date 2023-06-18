@@ -70,7 +70,7 @@ const Data = () => {
             <CardHeader title="Todo List 🛹 ✔️"></CardHeader>
             <DataGrid
                 // hideFooter
-                             
+                checkboxSelection         
                 slots={{ toolbar: DataGridToolbar, baseButton: Button }} 
                 loading={loading} 
                 sx={{ height: 500 }} 

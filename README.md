@@ -1,5 +1,13 @@
 # material-ui
-Studying about material ui with project
+To Do List using Material UI
+
+* List View
+* Item view
+* Search
+* Data Classification - Sort
+* Export as .csv
+* Print
+* Router Dom
 
 To run this project you need to install:
 1. Node: https://nodejs.org/en/downloadnpm
